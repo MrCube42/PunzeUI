@@ -1,0 +1,130 @@
+.Expander-container {
+  width: 260px;
+  display: flex;
+  flex-direction: column;
+  user-select: none;
+}
+
+.Expander-title {
+  transition: 150ms;
+
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+
+  border: none;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  outline: none;
+
+  display: flex;
+  justify-content: flex-end;
+  font-weight: bold;
+
+  font-size: 18px;
+
+  color: black;
+
+  text-transform: uppercase;
+  box-sizing: border-box;
+  height: 50px;
+  padding: 15px;
+  border-radius: 5px;
+
+  background: rgb(219, 165, 162);
+}
+
+.Expander-title span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.Expander-title.expandable {
+  cursor: pointer;
+
+  background: rgb(174, 121, 117);
+  background: linear-gradient(
+    90deg,
+    rgba(174, 121, 117, 1) 0%,
+    rgba(245, 185, 89, 1) 100%
+  );
+}
+
+.Expander-title.expandable:not(:active):hover {
+  box-shadow: 2px 2px 5px 0px rgba(246, 188, 91, 0.31);
+  -webkit-box-shadow: 2px 2px 5px 0px rgba(246, 188, 91, 0.31);
+  -moz-box-shadow: 2px 2px 5px 0px rgba(246, 188, 91, 0.31);
+  cursor: pointer;
+  transform: translateY(-1px);
+}
+
+.Expander-title.expandable:active {
+  opacity: 0.9;
+}
+
+.Expander-title[disabled] {
+  opacity: 0.4;
+}
+
+.Expander-content {
+  visibility: collapse;
+  opacity: 0;
+
+  transition: 200ms ease-in-out;
+  font-family: Roboto, sans-serif;
+
+  position: relative;
+  margin-top: 25px;
+  border: 1px solid #f7bc54;
+  border-radius: 5px;
+  color: #2a2e36;
+  background: #e8e8e8;
+
+  box-shadow: 4px 4px 10px 0px rgba(246, 188, 91, 0.31);
+  -webkit-box-shadow: 4px 4px 10px 0px rgba(246, 188, 91, 0.31);
+  -moz-box-shadow: 4px 4px 10px 0px rgba(246, 188, 91, 0.31);
+}
+
+.Expander-content.expanded {
+  visibility: visible;
+  opacity: 1;
+}
+
+.Expander-content-tip {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 10px 12px 10px;
+  border-color: transparent transparent #f7bc54 transparent;
+
+  position: relative;
+  margin-top: -12px;
+  left: 15px;
+}
+
+.Expander-content-tip:before {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 12px 14px 12px;
+  border-color: transparent transparent #f7bc54 transparent;
+
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -12px;
+}
+
+.Expander-content-tip:after {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 10px 12px 10px;
+  border-color: transparent transparent #e8e8e8 transparent;
+
+  content: "";
+  position: absolute;
+  left: -10px;
+}
