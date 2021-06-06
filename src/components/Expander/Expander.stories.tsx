@@ -19,11 +19,20 @@ export const WithContent = Template.bind({});
 WithContent.args = {
   ...Standard.args,
   title: "Technische Daten",
+  icon: "tv",
   content: (
     <ul>
-      <li>Maße: 3x5x7cm</li>
-      <li>Gewicht: 12kg</li>
-      <li>Verfügbarkeit: Ausverkauft</li>
+      <li>
+        Max. Auflösung:
+        <br />
+        3840 x 2160px
+      </li>
+      <li>
+        Abmessungen:
+        <br />
+        1,45m x 86,20cm x 4,12cm
+      </li>
+      <li>Anzeigegröße: 65 Zoll</li>
     </ul>
   ),
 };
