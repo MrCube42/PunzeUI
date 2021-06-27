@@ -11,4 +11,8 @@ export const parameters = {
       date: /Date$/,
     },
   },
-};
+  options: {
+    // Sort the stories by 'order' parameter (ascending).
+    storySort: (a, b) => a[2]?.order - b[2]?.order
+  },
+}
