@@ -1,7 +1,57 @@
-import { Meta } from '@storybook/addon-docs';
+import { Meta, Description, ArgsTable, Story, Canvas } from '@storybook/addon-docs';
+import { Expander } from '../../components/Expander';
 
 <Meta title="Punze UI / Components / Expander" parameters={{ order: 30 }} />
 
 # Expander
 
-TODO
+<Description markdown={`
+##### _Accordion_, [_Collapsible Container_](https://www.iso.org/obp/ui/#iso:std:iso:9241:-161:ed-1:v1:en)
+The expander is used to hide information on the user interface that is not relevant at all times, to leave it accessible and to make it visible only when needed.
+It therefore has the two states "collapsed" and "expanded".
+In the collapsed state, the element behaves like a button.
+If it is pressed, the content becomes visible and the expander unfolds.
+You can pass any HTML as content of the expander. If no content was passed, the expander cannot be expanded.
+`} />
+
+## Examples
+<Story id="components-expander--with-content" />
+
+### Others Control States
+<Canvas>
+  <Story id="components-expander--standard" />
+  <Story id="components-expander--with-icon" />
+  <Story id="components-expander--disabled" />
+</Canvas>
+
+## Usage
+
+Specify the expander's title and icon.
+Additionally, the expander can be disabled, e.g. if application state should prevent any interaction with the expander.
+
+```tsx
+<Expander title="Technische Daten" icon="tv"
+  disabled={propertyThatWillDisable}
+>
+  ...
+</Expander>
+```
+
+You can put any HTML as content of the Expander.
+
+```tsx
+<Expander title="Technische Daten" icon="tv">
+  <ul>
+    <li>
+      Max. Auflösung:
+      <br />
+      3840 x 2160px
+    </li>
+    <li>Anzeigegröße: 65 Zoll</li>
+  </ul>
+</Expander>
+```
+
+## Properties
+
+<ArgsTable of={Expander} />
