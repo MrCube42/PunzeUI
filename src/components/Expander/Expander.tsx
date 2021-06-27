@@ -4,9 +4,21 @@ import React from "react";
 import "./Expander.css";
 
 export interface ExpanderProps {
+  /**
+   * A property to prevent any user interaction with the expander.
+   */
   disabled?: boolean;
+  /**
+   * An additional icon key of font awesome that will shown besides the title.
+   */
   icon?: IconProp;
+  /**
+   * The text that is shown in upper case in the button to expand the content.
+   */
   title: string;
+  /**
+   * Will be called whenever the expander collapses or expands.
+   */
   expandedChange?: (isExpanded: boolean) => void;
 }
 
