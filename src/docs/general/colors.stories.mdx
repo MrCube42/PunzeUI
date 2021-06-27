@@ -1,7 +1,15 @@
-import { Meta } from '@storybook/addon-docs';
+import { Meta, ColorPalette, ColorItem } from '@storybook/addon-docs';
 
 <Meta title="Punze UI / General / Colors" parameters={{ order: 20 }} />
 
 # Colors
 
-TODO
+<ColorPalette>
+  <ColorItem title="foreground.dark" subtitle="Black" colors={['#000']} />
+  <ColorItem title="foreground.medium" subtitle="Dark Gray" colors={['#2a2e36']} />
+  <ColorItem title="background.default" subtitle="Dark Salmon" colors={['rgb(219 165 162)']} />
+  <ColorItem title="background.interactive" subtitle="Salmon to Yellow"
+    colors={['linear-gradient(90deg, rgba(174, 121, 117, 1) 0%, rgba(245, 185, 89, 1) 100%)']} />
+  <ColorItem title="background.light" subtitle="Light Gray" colors={['#e8e8e8']} />
+  <ColorItem title="highlight" subtitle="Yellow" colors={['#f7bc54']} />
+</ColorPalette>
