@@ -54,4 +54,8 @@ export default {
     expandedChange: { table: { disable: true } },
     content: { table: { disable: true } },
   },
+  parameters: {
+    order: 999,
+    docsOnly: true
+  }
 } as Meta;
